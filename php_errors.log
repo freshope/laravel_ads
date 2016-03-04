@@ -1,0 +1,70 @@
+[23-Feb-2016 01:53:38 UTC] PHP Parse error:  syntax error, unexpected 'return' (T_RETURN) in /home/ubuntu/workspace/todolog/app/Http/routes.php on line 45
+[23-Feb-2016 01:53:38 UTC] PHP Stack trace:
+[23-Feb-2016 01:53:38 UTC] PHP   1. {main}() /home/ubuntu/workspace/todolog/public/index.php:0
+[23-Feb-2016 01:53:38 UTC] PHP   2. Illuminate\Foundation\Http\Kernel->handle() /home/ubuntu/workspace/todolog/public/index.php:54
+[23-Feb-2016 01:53:38 UTC] PHP   3. Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter() /home/ubuntu/workspace/todolog/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php:99
+[23-Feb-2016 01:53:38 UTC] PHP   4. Illuminate\Foundation\Http\Kernel->bootstrap() /home/ubuntu/workspace/todolog/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php:127
+[23-Feb-2016 01:53:38 UTC] PHP   5. Illuminate\Foundation\Application->bootstrapWith() /home/ubuntu/workspace/todolog/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php:232
+[23-Feb-2016 01:53:38 UTC] PHP   6. Illuminate\Foundation\Bootstrap\BootProviders->bootstrap() /home/ubuntu/workspace/todolog/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:203
+[23-Feb-2016 01:53:38 UTC] PHP   7. Illuminate\Foundation\Application->boot() /home/ubuntu/workspace/todolog/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php:17
+[23-Feb-2016 01:53:38 UTC] PHP   8. array_walk() /home/ubuntu/workspace/todolog/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:718
+[23-Feb-2016 01:53:38 UTC] PHP   9. Illuminate\Foundation\Application->Illuminate\Foundation\{closure}() /home/ubuntu/workspace/todolog/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:718
+[23-Feb-2016 01:53:38 UTC] PHP  10. Illuminate\Foundation\Application->bootProvider() /home/ubuntu/workspace/todolog/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:717
+[23-Feb-2016 01:53:38 UTC] PHP  11. Illuminate\Container\Container->call() /home/ubuntu/workspace/todolog/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:734
+[23-Feb-2016 01:53:38 UTC] PHP  12. call_user_func_array:{/home/ubuntu/workspace/todolog/vendor/laravel/framework/src/Illuminate/Container/Container.php:507}() /home/ubuntu/workspace/todolog/vendor/laravel/framework/src/Illuminate/Container/Container.php:507
+[23-Feb-2016 01:53:38 UTC] PHP  13. App\Providers\RouteServiceProvider->boot() /home/ubuntu/workspace/todolog/vendor/laravel/framework/src/Illuminate/Container/Container.php:507
+[23-Feb-2016 01:53:38 UTC] PHP  14. Illuminate\Foundation\Support\Providers\RouteServiceProvider->boot() /home/ubuntu/workspace/todolog/app/Providers/RouteServiceProvider.php:29
+[23-Feb-2016 01:53:38 UTC] PHP  15. Illuminate\Foundation\Support\Providers\RouteServiceProvider->loadRoutes() /home/ubuntu/workspace/todolog/vendor/laravel/framework/src/Illuminate/Foundation/Support/Providers/RouteServiceProvider.php:31
+[23-Feb-2016 01:53:38 UTC] PHP  16. Illuminate\Container\Container->call() /home/ubuntu/workspace/todolog/vendor/laravel/framework/src/Illuminate/Foundation/Support/Providers/RouteServiceProvider.php:72
+[23-Feb-2016 01:53:38 UTC] PHP  17. call_user_func_array:{/home/ubuntu/workspace/todolog/vendor/laravel/framework/src/Illuminate/Container/Container.php:507}() /home/ubuntu/workspace/todolog/vendor/laravel/framework/src/Illuminate/Container/Container.php:507
+[23-Feb-2016 01:53:38 UTC] PHP  18. App\Providers\RouteServiceProvider->map() /home/ubuntu/workspace/todolog/vendor/laravel/framework/src/Illuminate/Container/Container.php:507
+[23-Feb-2016 01:53:38 UTC] PHP  19. Illuminate\Routing\Router->group() /home/ubuntu/workspace/todolog/app/Providers/RouteServiceProvider.php:42
+[23-Feb-2016 01:53:38 UTC] PHP  20. call_user_func:{/home/ubuntu/workspace/todolog/vendor/laravel/framework/src/Illuminate/Routing/Router.php:398}() /home/ubuntu/workspace/todolog/vendor/laravel/framework/src/Illuminate/Routing/Router.php:398
+[23-Feb-2016 01:53:38 UTC] PHP  21. App\Providers\RouteServiceProvider->App\Providers\{closure}() /home/ubuntu/workspace/todolog/vendor/laravel/framework/src/Illuminate/Routing/Router.php:398
+[23-Feb-2016 01:54:36 UTC] PHP Parse error:  syntax error, unexpected 'return' (T_RETURN) in /home/ubuntu/workspace/todolog/app/Http/routes.php on line 45
+[23-Feb-2016 01:54:36 UTC] PHP Stack trace:
+[23-Feb-2016 01:54:36 UTC] PHP   1. {main}() /home/ubuntu/workspace/todolog/public/index.php:0
+[23-Feb-2016 01:54:36 UTC] PHP   2. Illuminate\Foundation\Http\Kernel->handle() /home/ubuntu/workspace/todolog/public/index.php:54
+[23-Feb-2016 01:54:36 UTC] PHP   3. Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter() /home/ubuntu/workspace/todolog/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php:99
+[23-Feb-2016 01:54:36 UTC] PHP   4. Illuminate\Foundation\Http\Kernel->bootstrap() /home/ubuntu/workspace/todolog/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php:127
+[23-Feb-2016 01:54:36 UTC] PHP   5. Illuminate\Foundation\Application->bootstrapWith() /home/ubuntu/workspace/todolog/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php:232
+[23-Feb-2016 01:54:36 UTC] PHP   6. Illuminate\Foundation\Bootstrap\BootProviders->bootstrap() /home/ubuntu/workspace/todolog/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:203
+[23-Feb-2016 01:54:36 UTC] PHP   7. Illuminate\Foundation\Application->boot() /home/ubuntu/workspace/todolog/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/BootProviders.php:17
+[23-Feb-2016 01:54:36 UTC] PHP   8. array_walk() /home/ubuntu/workspace/todolog/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:718
+[23-Feb-2016 01:54:36 UTC] PHP   9. Illuminate\Foundation\Application->Illuminate\Foundation\{closure}() /home/ubuntu/workspace/todolog/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:718
+[23-Feb-2016 01:54:36 UTC] PHP  10. Illuminate\Foundation\Application->bootProvider() /home/ubuntu/workspace/todolog/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:717
+[23-Feb-2016 01:54:36 UTC] PHP  11. Illuminate\Container\Container->call() /home/ubuntu/workspace/todolog/vendor/laravel/framework/src/Illuminate/Foundation/Application.php:734
+[23-Feb-2016 01:54:36 UTC] PHP  12. call_user_func_array:{/home/ubuntu/workspace/todolog/vendor/laravel/framework/src/Illuminate/Container/Container.php:507}() /home/ubuntu/workspace/todolog/vendor/laravel/framework/src/Illuminate/Container/Container.php:507
+[23-Feb-2016 01:54:36 UTC] PHP  13. App\Providers\RouteServiceProvider->boot() /home/ubuntu/workspace/todolog/vendor/laravel/framework/src/Illuminate/Container/Container.php:507
+[23-Feb-2016 01:54:36 UTC] PHP  14. Illuminate\Foundation\Support\Providers\RouteServiceProvider->boot() /home/ubuntu/workspace/todolog/app/Providers/RouteServiceProvider.php:29
+[23-Feb-2016 01:54:36 UTC] PHP  15. Illuminate\Foundation\Support\Providers\RouteServiceProvider->loadRoutes() /home/ubuntu/workspace/todolog/vendor/laravel/framework/src/Illuminate/Foundation/Support/Providers/RouteServiceProvider.php:31
+[23-Feb-2016 01:54:36 UTC] PHP  16. Illuminate\Container\Container->call() /home/ubuntu/workspace/todolog/vendor/laravel/framework/src/Illuminate/Foundation/Support/Providers/RouteServiceProvider.php:72
+[23-Feb-2016 01:54:36 UTC] PHP  17. call_user_func_array:{/home/ubuntu/workspace/todolog/vendor/laravel/framework/src/Illuminate/Container/Container.php:507}() /home/ubuntu/workspace/todolog/vendor/laravel/framework/src/Illuminate/Container/Container.php:507
+[23-Feb-2016 01:54:36 UTC] PHP  18. App\Providers\RouteServiceProvider->map() /home/ubuntu/workspace/todolog/vendor/laravel/framework/src/Illuminate/Container/Container.php:507
+[23-Feb-2016 01:54:36 UTC] PHP  19. Illuminate\Routing\Router->group() /home/ubuntu/workspace/todolog/app/Providers/RouteServiceProvider.php:42
+[23-Feb-2016 01:54:36 UTC] PHP  20. call_user_func:{/home/ubuntu/workspace/todolog/vendor/laravel/framework/src/Illuminate/Routing/Router.php:398}() /home/ubuntu/workspace/todolog/vendor/laravel/framework/src/Illuminate/Routing/Router.php:398
+[23-Feb-2016 01:54:36 UTC] PHP  21. App\Providers\RouteServiceProvider->App\Providers\{closure}() /home/ubuntu/workspace/todolog/vendor/laravel/framework/src/Illuminate/Routing/Router.php:398
+[02-Mar-2016 08:04:06 UTC] PHP Fatal error:  Class 'From' not found in /home/ubuntu/workspace/todolog/storage/framework/views/b8c0cdb9d06242cc2c95b3dd228e4ec2b3445a0a.php on line 10
+[02-Mar-2016 08:04:41 UTC] PHP Fatal error:  Class 'From' not found in /home/ubuntu/workspace/todolog/storage/framework/views/b8c0cdb9d06242cc2c95b3dd228e4ec2b3445a0a.php on line 10
+[02-Mar-2016 08:06:29 UTC] PHP Fatal error:  Class 'From' not found in /home/ubuntu/workspace/todolog/storage/framework/views/b8c0cdb9d06242cc2c95b3dd228e4ec2b3445a0a.php on line 10
+[02-Mar-2016 08:06:31 UTC] PHP Fatal error:  Class 'From' not found in /home/ubuntu/workspace/todolog/storage/framework/views/b8c0cdb9d06242cc2c95b3dd228e4ec2b3445a0a.php on line 10
+[02-Mar-2016 08:06:51 UTC] PHP Fatal error:  Class 'From' not found in /home/ubuntu/workspace/todolog/storage/framework/views/b8c0cdb9d06242cc2c95b3dd228e4ec2b3445a0a.php on line 10
+[02-Mar-2016 08:06:53 UTC] PHP Fatal error:  Class 'From' not found in /home/ubuntu/workspace/todolog/storage/framework/views/b8c0cdb9d06242cc2c95b3dd228e4ec2b3445a0a.php on line 10
+[02-Mar-2016 08:07:48 UTC] PHP Fatal error:  Class 'Form' not found in /home/ubuntu/workspace/todolog/storage/framework/views/b8c0cdb9d06242cc2c95b3dd228e4ec2b3445a0a.php on line 10
+[02-Mar-2016 08:07:51 UTC] PHP Fatal error:  Class 'Form' not found in /home/ubuntu/workspace/todolog/storage/framework/views/b8c0cdb9d06242cc2c95b3dd228e4ec2b3445a0a.php on line 10
+[02-Mar-2016 08:08:24 UTC] PHP Fatal error:  Class 'Form' not found in /home/ubuntu/workspace/todolog/storage/framework/views/b8c0cdb9d06242cc2c95b3dd228e4ec2b3445a0a.php on line 10
+[02-Mar-2016 08:08:26 UTC] PHP Fatal error:  Class 'Form' not found in /home/ubuntu/workspace/todolog/storage/framework/views/b8c0cdb9d06242cc2c95b3dd228e4ec2b3445a0a.php on line 10
+[02-Mar-2016 08:15:27 UTC] PHP Fatal error:  Call to undefined method Illuminate\Foundation\Application::bindShared() in /home/ubuntu/workspace/todolog/vendor/illuminate/html/HtmlServiceProvider.php on line 36
+[02-Mar-2016 09:07:49 UTC] PHP Fatal error:  Call to undefined method Illuminate\Foundation\Application::bindShared() in /home/ubuntu/workspace/todolog/vendor/illuminate/html/HtmlServiceProvider.php on line 36
+[02-Mar-2016 09:07:51 UTC] PHP Fatal error:  Call to undefined method Illuminate\Foundation\Application::bindShared() in /home/ubuntu/workspace/todolog/vendor/illuminate/html/HtmlServiceProvider.php on line 36
+[02-Mar-2016 09:26:28 UTC] PHP Fatal error:  Call to undefined method Illuminate\Foundation\Application::bindShared() in /home/ubuntu/workspace/todolog/vendor/illuminate/html/HtmlServiceProvider.php on line 36
+[02-Mar-2016 09:26:32 UTC] PHP Fatal error:  Call to undefined method Illuminate\Foundation\Application::bindShared() in /home/ubuntu/workspace/todolog/vendor/illuminate/html/HtmlServiceProvider.php on line 36
+[02-Mar-2016 09:27:06 UTC] PHP Fatal error:  Call to undefined method Illuminate\Foundation\Application::bindShared() in /home/ubuntu/workspace/todolog/vendor/illuminate/html/HtmlServiceProvider.php on line 36
+[03-Mar-2016 00:53:02 UTC] PHP Fatal error:  Undefined constant 'FacebookAds\Http\Exception\AuthorizationException' in /home/ubuntu/workspace/todolog/config/app.php on line 168
+[03-Mar-2016 00:54:13 UTC] PHP Fatal error:  Undefined constant 'FacebookAds\Http\Exception\AuthorizationException' in /home/ubuntu/workspace/todolog/config/app.php on line 168
+[03-Mar-2016 02:33:12 UTC] PHP Fatal error:  Class 'App\Http\Controllers\Config' not found in /home/ubuntu/workspace/todolog/app/Http/Controllers/FacebookController.php on line 39
+[03-Mar-2016 02:36:29 UTC] PHP Fatal error:  Class 'App\Http\Controllers\Config' not found in /home/ubuntu/workspace/todolog/app/Http/Controllers/FacebookController.php on line 40
+[03-Mar-2016 02:45:18 UTC] PHP Fatal error:  Class 'App\Http\Controllers\Input' not found in /home/ubuntu/workspace/todolog/app/Http/Controllers/FacebookController.php on line 70
+[03-Mar-2016 02:46:48 UTC] PHP Fatal error:  Class 'App\Http\Controllers\Input' not found in /home/ubuntu/workspace/todolog/app/Http/Controllers/FacebookController.php on line 70
+[03-Mar-2016 06:23:02 UTC] PHP Fatal error:  Class 'App\Http\Controllers\DateTime' not found in /home/ubuntu/workspace/todolog/app/Http/Controllers/FacebookController.php on line 218
+[03-Mar-2016 09:07:21 UTC] PHP Fatal error:  Call to undefined function App\Http\Controllers\cmd() in /home/ubuntu/workspace/todolog/app/Http/Controllers/FacebookController.php on line 246
