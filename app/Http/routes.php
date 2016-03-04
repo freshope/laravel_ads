@@ -47,3 +47,4 @@ Route::get('image', function() {
 
 
 Route::controller('facebook', 'FacebookController');
+
