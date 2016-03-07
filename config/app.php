@@ -162,29 +162,6 @@ return [
         Illuminate\Html\HtmlServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
 
-        /*
-         * Facebook Service Providers...
-        FacebookAds\Http\Exception\AuthorizationException::class,
-        FacebookAds\Http\Exception\RequestException::class,
-        FacebookAds\Object\Campaign::class,
-        FacebookAds\Object\AdSet::class,
-        FacebookAds\Object\Ad::class,
-        FacebookAds\Object\AdCreative::class,
-        FacebookAds\Object\AdImage::class,
-        FacebookAds\Object\ObjectStorySpec::class,
-        FacebookAds\Object\TargetingSpecs::class,
-        FacebookAds\Object\Fields\CampaignFields::class,
-        FacebookAds\Object\Fields\AdSetFields::class,
-        FacebookAds\Object\Fields\AdFields::class,
-        FacebookAds\Object\Fields\AdCreativeFields::class,
-        FacebookAds\Object\Fields\AdImageFields::class,
-        FacebookAds\Object\Fields\ObjectStorySpecFields::class,
-        FacebookAds\Object\Fields\TargetingSpecsFields::class,
-        FacebookAds\Object\Fields\ObjectStory\LinkDataFields::class,
-        FacebookAds\Object\ObjectStory\LinkData::class,
-        FacebookAds\Object\Values\AdObjectives::class,
-         */
-
     ],
 
     /*
