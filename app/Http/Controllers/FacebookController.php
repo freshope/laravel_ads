@@ -28,7 +28,12 @@ use FacebookAds\Object\Fields\TargetingSpecsFields;
 use FacebookAds\Object\Fields\ObjectStory\LinkDataFields;
 use FacebookAds\Object\ObjectStory\LinkData;
 use FacebookAds\Object\Values\AdObjectives;
+use FacebookAds\Object\AdAccount;
+use FacebookAds\Object\Fields\AdPreviewFields;
 use DateTime;
+
+use FacebookAds\Object\Values\AdFormats;
+
 
 class FacebookController extends Controller
 {
@@ -65,6 +70,82 @@ class FacebookController extends Controller
     {
         return view('facebook.index');
     }
+
+    /**
+     * Show input facebook form
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function getPreview()
+    {
+        return view('facebook.preview');
+    }
+
+    /**
+     * Show input facebook form
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function getPreviewaction(Request $request)
+    {
+
+        //$link_data = new LinkData();
+        //$link_data->{LinkDataFields::LINK} = $request->input('link');
+
+        //$link_data->{LinkDataFields::MESSAGE} = "";
+        //$link_data->{LinkDataFields::CAPTION} = "";
+        //$link_data->{LinkDataFields::IMAGE_HASH} = $adimage->hash;
+        //$link_data->{LinkDataFields::IMAGE_HASH} = '707665f1f6d86f951450dfbcce013d56';
+        //$link_data->{LinkDataFields::IMAGE_HASH} = "";
+
+        $link_data = new LinkData();
+        $link_data->setData(array(
+            LinkDataFields::LINK => $request->input('link'),
+            //LinkDataFields::PICTURE => '<IMAGE_URL>',
+            LinkDataFields::MESSAGE => 'Message',
+            LinkDataFields::NAME => 'Name',
+            LinkDataFields::DESCRIPTION => 'Description',
+            /*
+            LinkDataFields::CALL_TO_ACTION => array(
+                'type' => CallToActionTypes::USE_APP,
+                'value' => array(
+                    'link' => '<URL>',
+                    'link_caption' => 'CTA Caption',
+                ),
+            ),
+            */
+        ));
+/*
+        $object_story_spec = new ObjectStorySpec();
+        $object_story_spec->{ObjectStorySpecFields::PAGE_ID} = $request->input('page_id');
+        $object_story_spec->{ObjectStorySpecFields::LINK_DATA} = $link_data;
+*/
+        $story = new ObjectStorySpec();
+        $story->setData(array(
+            ObjectStorySpecFields::PAGE_ID => $request->input('page_id'),
+            ObjectStorySpecFields::LINK_DATA => $link_data,
+        ));
+/*
+        $creative = new AdCreative();
+        $creative->{AdCreativeFields::OBJECT_STORY_SPEC } = $object_story_spec;
+*/
+        $creative = new AdCreative();
+        $creative->setData(array(
+            AdCreativeFields::OBJECT_STORY_SPEC => $story,
+        ));
+
+        $account = new AdAccount('act_998426013584269');
+        $result = $account->getAdPreviews(array(), array(
+                AdPreviewFields::CREATIVE => $creative,
+                AdPreviewFields::AD_FORMAT => AdFormats::DESKTOP_FEED_STANDARD,
+        ))->getResponse()->getContent();
+
+
+        //var_dump($result);
+        echo json_encode($result);
+
+    }
+
 
     /**
      * Save facebook campaign
@@ -261,7 +342,8 @@ class FacebookController extends Controller
         $link_data->{LinkDataFields::CAPTION} = $request->input('description');
         $link_data->{LinkDataFields::LINK} = $request->input('link');
         //$link_data->{LinkDataFields::IMAGE_HASH} = $adimage->hash;
-        $link_data->{LinkDataFields::IMAGE_HASH} = '707665f1f6d86f951450dfbcce013d56';
+        //$link_data->{LinkDataFields::IMAGE_HASH} = '707665f1f6d86f951450dfbcce013d56';
+        $link_data->{LinkDataFields::IMAGE_HASH} = "";
 
         $object_story_spec = new ObjectStorySpec();
         $object_story_spec->{ObjectStorySpecFields::PAGE_ID} = $request->input('page_id');
