@@ -48,3 +48,4 @@ Route::get('image', function() {
 
 Route::get('facebook/api/{version}/{all}', 'FacebookController@bridgeApi')->where('all', '.*');
 Route::controller('facebook', 'FacebookController');
+
