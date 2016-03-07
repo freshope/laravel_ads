@@ -77,24 +77,24 @@
                         <input class="form-control" placeholder="" required="required" name="page_id" type="text" value="766809370116473">
                     </div>
                     <div class="form-group">
-                        <label>Image URL<span class="color-orange">*</span></label>
-                        <small class="inline-block hidden-sm hidden-xs color-ing"></small>
-                        <input class="form-control" placeholder="" required="required" name="image_url" type="text" value="https://external.xx.fbcdn.net/safe_image.php?d=AQDKZUH92JrEOwaX&w=470&h=246&url=https%3A%2F%2Fstatic.withblog.net%2Fwww%2Fweb%2Fimg%2Fwb-default.png&cfs=1&upscale=1&ext=png2jpg">
-                    </div>
-                    <div class="form-group">
-                        <label>제목<span class="color-orange">*</span></label>
-                        <small class="inline-block hidden-sm hidden-xs color-ing"></small>
-                        <input class="form-control" placeholder="" required="required" name="title" type="text" value="위드블로그">
-                    </div>
-                    <div class="form-group">
-                        <label>설명<span class="color-orange">*</span></label>
-                        <small class="inline-block hidden-sm hidden-xs color-ing"></small>
-                        <input class="form-control" placeholder="" required="required" name="description" type="text" value="위드블로그 가입해 보세요.">
-                    </div>
-                    <div class="form-group">
                         <label>링크 URL<span class="color-orange">*</span></label>
                         <small class="inline-block hidden-sm hidden-xs color-ing"></small>
                         <input class="form-control" placeholder="" required="required" name="link" type="text" value="https://withblog.net/">
+                    </div>
+                    <!-- div class="form-group">
+                        <label>Image URL<span class="color-orange"></span></label>
+                        <small class="inline-block hidden-sm hidden-xs color-ing"></small>
+                        <input class="form-control" placeholder="" name="image_url" type="text" value="https://external.xx.fbcdn.net/safe_image.php?d=AQDKZUH92JrEOwaX&w=470&h=246&url=https%3A%2F%2Fstatic.withblog.net%2Fwww%2Fweb%2Fimg%2Fwb-default.png&cfs=1&upscale=1&ext=png2jpg">
+                    </div -->
+                    <div class="form-group">
+                        <label>제목<span class="color-orange"></span></label>
+                        <small class="inline-block hidden-sm hidden-xs color-ing"></small>
+                        <input class="form-control" placeholder="" name="title" type="text" value="">
+                    </div>
+                    <div class="form-group">
+                        <label>설명<span class="color-orange"></span></label>
+                        <small class="inline-block hidden-sm hidden-xs color-ing"></small>
+                        <input class="form-control" placeholder="" name="description" type="text" value="">
                     </div>
                 </div>
                 

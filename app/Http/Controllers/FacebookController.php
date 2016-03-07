@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
+use Facebook\Facebook;
+use Facebook\Exceptions\FacebookAuthenticationException;
+use Facebook\Exceptions\FacebookResponseException;
+use Facebook\Exceptions\FacebookSDKException;
+
 use FacebookAds\Api;
 use FacebookAds\Logger\CurlLogger;
 use FacebookAds\Http\Exception\AuthorizationException;
@@ -57,6 +62,41 @@ class FacebookController extends Controller
     }
 
     /**
+     * Call facebook API bridge
+     *
+     * @return json
+     */
+    public function bridgeApi(Request $request, $version)
+    {
+        $segments = $request->segments();
+        $method = implode('/', array_slice($segments, 3));
+        $query = $request->all();
+        
+        $app_id = config('facebook.app_id');
+        $app_secret = config('facebook.app_secret');
+        $access_token = config('facebook.access_token');
+
+        $fb = new Facebook([
+            'app_id' => $app_id,
+            'app_secret' => $app_secret,
+            'default_access_token' => $access_token,
+            'default_graph_version' => $version
+        ]);
+
+        try {
+            $response = $fb->sendRequest('GET', $method, $query);
+        } catch(FacebookAuthenticationException $e) {
+            return response()->json(json_decode($e->getResponse()->getBody()));
+        } catch(FacebookResponseException $e) {
+            return response()->json(json_decode($e->getResponse()->getBody()));
+        } catch(FacebookSDKException $e) {
+            return response()->json(json_decode($e->getResponse()->getBody()));
+        }
+
+        return response()->json(json_decode($response->getBody()));
+    }
+
+    /**
      * Show input facebook form
      *
      * @return \Illuminate\Http\Response
@@ -69,6 +109,8 @@ class FacebookController extends Controller
     /**
      * Save facebook campaign
      *
+     * @param Request
+     * 
      * @return json
      */
     public function postCreate(Request $request)
@@ -96,6 +138,8 @@ class FacebookController extends Controller
     /**
      * Create facebook campaign
      *
+     * @param Request
+     * 
      * @return object
      */
     private function createCampaign(Request $request)
@@ -135,6 +179,9 @@ class FacebookController extends Controller
     /**
      * Create facebook adset
      *
+     * @param Request
+     * @param Campaign
+     * 
      * @return object
      */
     private function createAdset(Request $request, Campaign $campaign)
@@ -189,6 +236,9 @@ class FacebookController extends Controller
     /**
      * Create facebook ad
      *
+     * @param Request
+     * @param AdSet
+     * 
      * @return object
      */
     private function createAd(Request $request, AdSet $adset)
@@ -234,6 +284,8 @@ class FacebookController extends Controller
     /**
      * Create facebook creative
      *
+     * @param Request
+     * 
      * @return object
      */
     private function createCreative(Request $request)
@@ -261,7 +313,7 @@ class FacebookController extends Controller
         $link_data->{LinkDataFields::CAPTION} = $request->input('description');
         $link_data->{LinkDataFields::LINK} = $request->input('link');
         //$link_data->{LinkDataFields::IMAGE_HASH} = $adimage->hash;
-        $link_data->{LinkDataFields::IMAGE_HASH} = '707665f1f6d86f951450dfbcce013d56';
+        //$link_data->{LinkDataFields::IMAGE_HASH} = '707665f1f6d86f951450dfbcce013d56';
 
         $object_story_spec = new ObjectStorySpec();
         $object_story_spec->{ObjectStorySpecFields::PAGE_ID} = $request->input('page_id');
@@ -308,6 +360,8 @@ class FacebookController extends Controller
     /**
      * Convert is_autobid to bool
      *
+     * @param String
+     * 
      * @return bool
      */
     private function is_autobid_to_bool($is_autobid)
@@ -318,6 +372,8 @@ class FacebookController extends Controller
     /**
      * Convert pacing_type to array
      *
+     * @param String
+     * 
      * @return array
      */
     private function pacing_type_to_array($pacing_type)
@@ -328,6 +384,8 @@ class FacebookController extends Controller
     /**
      * Convert time to iso8601
      *
+     * @param String
+     * 
      * @return DateTime
      */
     private function time_to_iso8601($time)
