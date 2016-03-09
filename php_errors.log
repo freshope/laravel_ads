@@ -68,3 +68,8 @@
 [03-Mar-2016 02:46:48 UTC] PHP Fatal error:  Class 'App\Http\Controllers\Input' not found in /home/ubuntu/workspace/todolog/app/Http/Controllers/FacebookController.php on line 70
 [03-Mar-2016 06:23:02 UTC] PHP Fatal error:  Class 'App\Http\Controllers\DateTime' not found in /home/ubuntu/workspace/todolog/app/Http/Controllers/FacebookController.php on line 218
 [03-Mar-2016 09:07:21 UTC] PHP Fatal error:  Call to undefined function App\Http\Controllers\cmd() in /home/ubuntu/workspace/todolog/app/Http/Controllers/FacebookController.php on line 246
+[07-Mar-2016 06:06:04 UTC] PHP Parse error:  syntax error, unexpected '*' in /home/ubuntu/workspace/todolog/app/Http/Controllers/FacebookController.php on line 98
+[07-Mar-2016 06:07:29 UTC] PHP Fatal error:  Class 'App\Http\Controllers\Facebook\Facebook' not found in /home/ubuntu/workspace/todolog/app/Http/Controllers/FacebookController.php on line 79
+[07-Mar-2016 06:08:33 UTC] PHP Fatal error:  Class 'Facebook\Facebook\Facebook' not found in /home/ubuntu/workspace/todolog/app/Http/Controllers/FacebookController.php on line 81
+[07-Mar-2016 06:26:51 UTC] PHP Fatal error:  Cannot access protected property Facebook\Exceptions\FacebookResponseException::$response in /home/ubuntu/workspace/todolog/app/Http/Controllers/FacebookController.php on line 96
+[07-Mar-2016 06:30:00 UTC] PHP Fatal error:  Cannot access protected property Facebook\FacebookResponse::$body in /home/ubuntu/workspace/todolog/app/Http/Controllers/FacebookController.php on line 97
