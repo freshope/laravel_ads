@@ -22,8 +22,18 @@
             <div class="form-group">
                 <span class="form-control btn btn-custom orange preview_btn">미리보기</span>
             </div>
+        </div>
+    </div>
+    <div class="row">
 
+        <div class="col-xs-7">
+            <div class="desktopfeed_div">
+            </div>
+        </div>
+        <div class="col-xs-5">
             <div class="mobilefeed_div">
+            </div>
+            <div class="rightcolumn_div">
             </div>
         </div>
     </div>
@@ -37,14 +47,15 @@
 
         function preview_action() {
 
-            var preview_url = "/facebook/previewaction";
+            //var preview_url = "/facebook/previewaction";
+            var preview_url = "/facebook/api/v2.5/act_998426013584269/generatepreviews";
             var description = "";
             var message ="";
             var name ="";
             var image_hash = "";
             var page_id="766809370116473";
             var link = $(".link").val();
-            /*
+
             var creative={
                     "object_story_spec": {
                         "link_data": {
@@ -59,17 +70,49 @@
                         "page_id":page_id
                     }
                 };
-            */
-            //var mobilefeed_url = preview_url+'?ad_format=MOBILE_FEED_STANDARD&creative='+JSON.stringify(creative) ;
+/*
+            if(call_to_action_select != "" && call_to_action_select != null && call_to_action_select != 'undefined'){
+                call_to_action = {
+                    "type":call_to_action_select,
+                    "value":{
+                        "link":link,
+                        "link_caption":link_caption
+                    }
+                };
+            }
+*/
+            var mobilefeed_url = preview_url+'?ad_format=MOBILE_FEED_STANDARD&creative='+JSON.stringify(creative);
+            var desktopfeed_url = preview_url+'?ad_format=DESKTOP_FEED_STANDARD&creative='+JSON.stringify(creative);
+            var rightcolumn_url = preview_url+'?ad_format=RIGHT_COLUMN_STANDARD&creative='+JSON.stringify(creative);
+
             //var mobilefeed_url = preview_url+'?creative='+JSON.stringify(creative) ;
-            var mobilefeed_url = preview_url+'?link='+link+'&page_id='+page_id;
+            //var mobilefeed_url = preview_url+'?link='+link+'&page_id='+page_id;
 
             $.getJSON(mobilefeed_url , function(opts_mobilefeed){
                 //console.log(opts_mobilefeed);
 
                 $(".mobilefeed_div").empty();
-                iframe_src_mob = opts_mobilefeed.data[0]['body'].replace('width="335"','width="322"').replace('height="450"','height="395"').replace('scrolling="yes"','scrolling="no"');
+                iframe_src_mob = opts_mobilefeed.data[0]['body'].replace('scrolling="yes"','scrolling="no"').replace('height="450"','height="375"').replace('width="335"','width="322"').replace('border: none;','border: 1px solid;');
                 $(".mobilefeed_div").html(iframe_src_mob);
+
+
+            }).error(function(jqXHR, textStatus) { alert("FaceBook API Error \n - "+textStatus +" :\n"+jqXHR.responseText); });
+
+            $.getJSON(desktopfeed_url , function(opts_desktopfeed){
+                //console.log(opts_mobilefeed);
+
+                $(".desktopfeed_div").empty();
+                iframe_src_mob = opts_desktopfeed.data[0]['body'].replace('scrolling="yes"','scrolling="no"').replace('height="450"','height="472"');
+                $(".desktopfeed_div").html(iframe_src_mob);
+
+            }).error(function(jqXHR, textStatus) { alert("FaceBook API Error \n - "+textStatus +" :\n"+jqXHR.responseText); });
+
+            $.getJSON(rightcolumn_url , function(opts_rightcolumn){
+                //console.log(opts_mobilefeed);
+
+                $(".rightcolumn_div").empty();
+                iframe_src_mob = opts_rightcolumn.data[0]['body'].replace('scrolling="yes"','scrolling="no"').replace('height="213"','height="230"').replace('border: none;','border: 1px solid;');
+                $(".rightcolumn_div").html(iframe_src_mob);
 
             }).error(function(jqXHR, textStatus) { alert("FaceBook API Error \n - "+textStatus +" :\n"+jqXHR.responseText); });
         }
